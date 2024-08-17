@@ -1,0 +1,12 @@
+--Script to list all the databases on a SQL Server instance
+
+SELECT 
+    name AS DatabaseName,
+    database_id AS DatabaseID,
+    create_date AS CreationDate,
+    state_desc AS State,
+    recovery_model_desc AS RecoveryModel
+FROM 
+    sys.databases
+ORDER BY 
+    name;
