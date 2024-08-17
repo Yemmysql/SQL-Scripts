@@ -1,0 +1,9 @@
+-- SQL to list all the database on my instance
+
+SELECT 
+    name AS DatabaseName,
+    suser_sname(owner_sid) AS OwnerName,
+    state_desc AS State,
+    create_date AS CreationDate
+FROM sys.databases
+ORDER BY name;
